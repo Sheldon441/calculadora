@@ -7,10 +7,8 @@ let segundoValor = parseFloat (prompt ('Digite o segundo valor: '))
     
 function calculadora (primeroValor, segundoValor, operador) {
 
-
     switch (operador) {
-    
- 
+
     case "+": 
     return primeroValor + segundoValor
     break;
@@ -24,8 +22,13 @@ function calculadora (primeroValor, segundoValor, operador) {
     break;
 
     case "/":
-    return primeroValor / segundoValor
-    break;
+        if (segundoValor === 0) {
+            console.log("O número que você digitou é zero.");
+        } else if (segundoValor % 0 === 0) {
+            console.log("O número é divisível por zero.");
+        } else {
+            console.log("O número não é divisível por zero.");
+        }
 
     case "%":
         return primeiroValor % segundoValor    
